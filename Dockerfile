@@ -150,7 +150,7 @@ RUN cd /root/openjpeg-version.2.1 && cmake -DCMAKE_BUILD_TYPE=Release -DCMAKE_IN
 RUN apt-get install -y libjpeg-dev libpng-dev libtiff-dev libgif-dev
 RUN cd /root/libwebp-0.4.3 && ./configure --prefix=/usr && make && make install
 
-RUN cd /root/ImageMagick-7.0.2-0 && ./configure --prefix=/usr --with-jp2 && make && make install
+RUN cd /root/ImageMagick-7.0.2-4 && ./configure --prefix=/usr --with-jp2 && make && make install
 RUN chmod 755 /usr/local/bin/docker-php-ext-enable
 
 RUN pecl install imagick && docker-php-ext-enable imagick
